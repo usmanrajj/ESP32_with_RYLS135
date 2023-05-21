@@ -1,0 +1,28 @@
+/*
+Rajj Engineering
+
+Code Link :-
+https://github.com/usmanrajj/ESP32_with_RYLS135
+
+Video link:-
+https://youtu.be/cZjH5Eo8RpE
+*/
+#define ledPin 14 // Define the pin number for the LED
+
+void setup() {
+  pinMode(ledPin, OUTPUT);    // Initialize the LED pin as an output
+
+  Serial.begin(115200);       // Initialize the serial communication
+  Serial.println("Blink LED Example");
+}
+void loop() {
+  // Blink the LED ON
+  digitalWrite(ledPin, HIGH);
+  Serial.println("LED ON");
+  delay(1000); // Wait for 1 second
+
+  // Blink the LED OFF
+  digitalWrite(ledPin, LOW);
+  Serial.println("LED OFF");
+  delay(1000); // Wait for 1 second
+}
